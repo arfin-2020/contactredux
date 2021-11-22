@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import {useNavigate} from 'react-router-dom';
+
 const Create = () => {
+
     const  contacts = useSelector((state)=>state) ;
     // console.log(contacts);
     const [name, setName] = useState('');
@@ -94,4 +96,4 @@ const Create = () => {
     )
 }
 
-export default Create
+export default Create;
