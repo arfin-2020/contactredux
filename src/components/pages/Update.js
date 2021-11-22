@@ -1,11 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 const Update = () => {
+    const {id} = useParams();
+    console.log(id)
     return (
         <div className='container'>
             <div className='row'>
-                <h1 className='display-3 text-center'>Update Student Details</h1>
+                <h1 className='display-3 text-center'>Update Student Details {id}</h1>
                 <div className='col-md-6 shadow mx-auto p-5'>
                     <form>
                         <div className='form-group my-3'>
