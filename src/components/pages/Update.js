@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Update = () => {
     return (
@@ -10,10 +11,19 @@ const Update = () => {
                         <div className='form-group my-3'>
                             <input type='text' placeholder='Name' className='form-control' />
                         </div>
+                        <div className='form-group my-3'>
+                            <input type='text' placeholder='Email' className='form-control' />
+                        </div>
+                        <div className='form-group my-3'>
+                            <input type='text' placeholder='Number' className='form-control' />
+                        </div>
+                        <div className='form-group my-3'>
+                            <input type='submit' value='Update' className='btn btn-success' />
+                            <Link to='/' className='btn btn-danger ml-5'>Cancel</Link>
+                        </div>
                     </form>
                 </div>
             </div>
-            <h1>It's a update page</h1>
         </div>
     )
 }
