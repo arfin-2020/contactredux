@@ -2,15 +2,23 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from "react-redux";
 import 'react-toastify/dist/ReactToastify.css';
+import { createStore } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 import App from './App';
+import ContactReducer from "./components/redux/ContactReducer";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
+const store =  createStore(ContactReducer,composeWithDevTools())
+
 ReactDOM.render(
+  <Provider store={store}>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
