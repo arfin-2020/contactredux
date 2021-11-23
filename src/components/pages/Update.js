@@ -12,7 +12,7 @@ const Update = () => {
     const [phone, setPhone] = useState('');
 
     const dispatch = useDispatch();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     // console.log('currentContact', contacts);
     const currentContact = contacts.find((contact) => contact.id === parseInt(id) ? contact : null);
@@ -31,19 +31,19 @@ const Update = () => {
         e.preventDefault();
         // console.log(name, email, phone);
         const data = {
-            id,
+            id: parseInt(id),
             name,
             email,
             phone,
         };
      console.log('data',data)
         const checkDuplicateEmail = contacts.find((contact) =>
-            contact.email === email && contact.id === parseInt(id)
+            contact.email === email 
                 ? contact
                 : null);
                 
         const checkDuplicatePhoneNo = contacts.find((contact) =>
-            contact.phone === phone && contact.id === parseInt(id)
+            contact.phone === phone
                 ? contact
                 : null);
 
