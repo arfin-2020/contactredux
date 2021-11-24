@@ -19,7 +19,6 @@ const App = () => {
       <Route path="/create" element={<Create/>}/>
       <Route path="/update/:id" element={<Update/>}/>
       </Routes>
-      
     </Router>
   );
 }
